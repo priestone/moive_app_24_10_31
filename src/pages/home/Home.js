@@ -1,31 +1,36 @@
-import { useEffect, useState} from "react";
-import { nowPlaying, popular } from "../../api";
+import { useEffect, useState } from "react";
+import { nowPlaying, popular, topRated, upcoming } from "../../api";
 
 const Home = () => {
-    const [nowData, setNowData] = useState();
-    const [popData, setPopData] = useState();
+  const [nowData, setNowData] = useState();
+  const [popData, setPopData] = useState();
+  const [topData, setTopData] = useState();
+  const [upData, setUpData] = useState();
 
+  useEffect(() => {
+    (async () => {
+      try {
+        const { results: now } = await nowPlaying();
+        const { results: pop } = await popular();
+        const { results: top } = await topRated();
+        const { results: up } = await upComing();
 
-    useEffect( () => {
-    (async ()=>{
-        try {
-            const {results:now} = await nowPlaying();
-            const {results:pop} = await popular();
-    
-            setNowData(now);
-            setPopData(pop);
-        } catch (error) {
-            console.log(error);
-        }
-    })()
-    }, [])
+        setNowData(now);
+        setPopData(pop);
+        setTopData(top);
+        setUpData(up);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, []);
 
-    console.log(nowData);
-    console.log(popData);
+  console.log(nowData);
+  console.log(popData);
+  console.log(topData);
+  console.log(upData);
 
-    return(
-    <div>Home</div>
-)
-}
+  return <div>Home</div>;
+};
 
 export default Home;
