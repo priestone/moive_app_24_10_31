@@ -13,6 +13,7 @@
 # 설치항목
 
 - [x] npm i react-router-dom
+- [x] npm i node-fetch
 - [] npm i styled-components
 - [] npm i styled-reset
 - [] swiper
