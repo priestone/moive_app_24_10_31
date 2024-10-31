@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { nowPlaying, popular, topRated, upcoming } from "../../api";
+import { nowPlaying, popular, topRated, upComing } from "../../api";
 
 const Home = () => {
   const [nowData, setNowData] = useState();
