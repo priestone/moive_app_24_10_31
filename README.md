@@ -17,7 +17,7 @@
 - [x] npm i styled-components
 - [x] npm i styled-reset
 - [x] npm i react-spinners
-- [] swiper
+- [x] npm i swiper
 - [] font-awesome
 - [] npm i react-hook-form
 - [] helmet-async
