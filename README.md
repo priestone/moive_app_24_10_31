@@ -16,6 +16,7 @@
 - [x] npm i node-fetch
 - [x] npm i styled-components
 - [x] npm i styled-reset
+- [x] npm i react-spinners
 - [] swiper
 - [] font-awesome
 - [] npm i react-hook-form

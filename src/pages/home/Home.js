@@ -3,6 +3,7 @@ import { nowPlaying, popular, topRated, upComing } from "../../api";
 import styled from "styled-components";
 import { mainStyle } from "../../GlobalStyled";
 import { ORIGINAL_URL } from "../../constant/imgUrl";
+import Loading from "../../components/Loading";
 
 const Mainbanner = styled.section`
   height: 80vh;
@@ -80,14 +81,18 @@ const Home = () => {
   return (
     <div>
       {isloading ? (
-        "loading..."
+        <Loading />
       ) : (
-        <Mainbanner $coverImg={nowData[0]?.backdrop_path}>
-          <TitleWrap>
-            <h3>{nowData[0]?.title}</h3>
-            <p>{nowData[0]?.overview.slice(0, 100) + "..."}</p>
-          </TitleWrap>
-        </Mainbanner>
+        <>
+          {nowData && (
+            <Mainbanner $coverImg={nowData[0]?.backdrop_path}>
+              <TitleWrap>
+                <h3>{nowData[0]?.title}</h3>
+                <p>{nowData[0]?.overview.slice(0, 100) + "..."}</p>
+              </TitleWrap>
+            </Mainbanner>
+          )}
+        </>
       )}
     </div>
   );
