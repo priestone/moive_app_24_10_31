@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 const Container = styled.footer`
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
-  left: 0;
+  left: 0; */
+  margin-top: auto;
   width: 100%;
   height: 100px;
   background-color: white;

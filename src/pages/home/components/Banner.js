@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { nowPlaying } from "../../../api";
 import styled from "styled-components";
 import { mainStyle } from "../../../GlobalStyled";
 import { ORIGINAL_URL } from "../../../constant/imgUrl";
