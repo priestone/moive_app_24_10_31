@@ -3,6 +3,8 @@ import { nowPlaying, popular, topRated, upComing } from "../../api";
 import Loading from "../../components/Loading";
 import Banner from "./components/Banner";
 import Movies from "./components/Movies";
+import { Helmet } from "react-helmet-async";
+import PageTitle from "../../components/PageTitle";
 
 const Home = () => {
   const [nowData, setNowData] = useState();
@@ -41,6 +43,7 @@ const Home = () => {
         <Loading />
       ) : (
         <>
+          <PageTitle title={"HOME"} />
           {nowData && (
             <div>
               <Banner data={nowData} />
