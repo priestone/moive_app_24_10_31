@@ -44,10 +44,10 @@ const Home = () => {
           {nowData && (
             <div>
               <Banner data={nowData} />
-              <Movies data={nowData} title="현재상영중중" />
-              <Movies data={popData} title="현재인기작품" />
-              <Movies data={topData} title="역대인기작품" />
-              <Movies data={upData} title="신작품" />
+              <Movies data={nowData} title="현재 상영중" />
+              <Movies data={popData} title="인기영화" />
+              <Movies data={topData} title="랭킹 영화" />
+              <Movies data={upData} title="개봉 예정 영화" />
             </div>
           )}
         </>
