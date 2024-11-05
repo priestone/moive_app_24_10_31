@@ -3,8 +3,8 @@ import { nowPlaying, popular, topRated, upComing } from "../../api";
 import Loading from "../../components/Loading";
 import Banner from "./components/Banner";
 import Movies from "./components/Movies";
-import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle";
+import useScroolTop from "../../lib/useScrollTop";
 
 const Home = () => {
   const [nowData, setNowData] = useState();
@@ -12,6 +12,7 @@ const Home = () => {
   const [topData, setTopData] = useState();
   const [upData, setUpData] = useState();
   const [isloading, setIsloading] = useState(true);
+  useScroolTop();
 
   useEffect(() => {
     (async () => {
@@ -32,7 +33,7 @@ const Home = () => {
     })();
   }, []);
 
-  console.log(nowData);
+  // console.log(nowData);
   // console.log(popData);
   // console.log(topData);
   // console.log(upData);
