@@ -36,5 +36,5 @@ export const searchMovie = (keyword) => {
   return fetch(searchUrl, options).then((res) => res.json());
 };
 
-export const reviewMovie = (id) =>
-  fetch(url(`movie/${id}/reviews`), options).then((res) => res.json());
+export const similarMovie = (id) =>
+  fetch(url(`movie/${id}/similar`), options).then((res) => res.json());

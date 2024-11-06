@@ -8,7 +8,7 @@
 - [x] 각 페이지 UI 작업 및 반응형
 - [x] Helmet
 - [x] Header Scroll Event
-- [] Deploy
+- [x] Deploy
 
 # 설치항목
 

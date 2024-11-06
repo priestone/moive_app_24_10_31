@@ -63,7 +63,7 @@ const Search = () => {
     }
   };
 
-  console.log(term);
+  // console.log(term);
 
   return (
     <>
