@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { movieDetail } from "../../api";
+import { movieDetail, reviewMovie } from "../../api";
 import styled from "styled-components";
 import { mainStyle } from "../../GlobalStyled";
 import { ORIGINAL_URL, W500_URL } from "../../constant/imgUrl";
@@ -14,21 +14,24 @@ const Detail = () => {
   const { id } = useParams();
   const [data, setData] = useState();
   const [isLoading, setIsloading] = useState(true);
+  const [review, setReview] = useState();
   useScroolTop();
 
   useEffect(() => {
     (async () => {
       try {
         const detailData = await movieDetail(id);
+        const reviewData = await reviewMovie(id);
         setData(detailData);
         setIsloading(false);
+        setReview(reviewData);
       } catch (error) {
         console.log(error);
       }
     })();
   }, []);
-
-  // console.log(data);
+  console.log(review);
+  console.log(data);
 
   return (
     <>

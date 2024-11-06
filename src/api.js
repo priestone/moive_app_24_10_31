@@ -35,3 +35,6 @@ export const searchMovie = (keyword) => {
     baseUrl + `search/movie?query=${keyword}&include_adult=true&language=ko-kr`;
   return fetch(searchUrl, options).then((res) => res.json());
 };
+
+export const reviewMovie = (id) =>
+  fetch(url(`movie/${id}/reviews`), options).then((res) => res.json());
