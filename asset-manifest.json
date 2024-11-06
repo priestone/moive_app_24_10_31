@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/moive_app_24_10_31/static/css/main.3c70d7db.css",
+    "main.js": "/moive_app_24_10_31/static/js/main.90aa7f08.js",
+    "index.html": "/moive_app_24_10_31/index.html",
+    "main.3c70d7db.css.map": "/moive_app_24_10_31/static/css/main.3c70d7db.css.map",
+    "main.90aa7f08.js.map": "/moive_app_24_10_31/static/js/main.90aa7f08.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c70d7db.css",
+    "static/js/main.90aa7f08.js"
+  ]
+}
