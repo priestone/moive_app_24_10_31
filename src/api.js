@@ -15,8 +15,11 @@ const url = (urlName) => {
   return baseUrl + `${urlName}?language=ko-kr`;
 };
 
-export const nowPlaying = () =>
-  fetch(url("movie/now_playing"), options).then((res) => res.json());
+export const nowPlaying = (pageid) =>
+  fetch(
+    `https://api.themoviedb.org/3/movie/now_playing?language=ko-kr&pageid=${pageid}`,
+    options
+  ).then((res) => res.json());
 
 export const popular = () =>
   fetch(url("movie/popular"), options).then((res) => res.json());

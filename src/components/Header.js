@@ -44,8 +44,8 @@ const Header = () => {
   const scrollHandler = () => {
     const pageY = window.scrollY;
     const current = headerRef.current;
-    console.log(pageY);
-    console.log(current);
+    // console.log(pageY);
+    // console.log(current);
     if (pageY >= 400) {
       current.style.position = "fixed";
       current.style.backgroundColor = "rgba(0,0,0,0.5)";
